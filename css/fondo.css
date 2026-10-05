@@ -1,25 +1,578 @@
+/* =========================================================
+   FONDO AZUL OSCURO + FIGURAS DE INGENIERÍA
+========================================================= */
+
 html {
     min-height: 100%;
-
-    background-color: #eaf4f7;
-
-    background-image:
-        linear-gradient(
-            rgba(234, 244, 247, .78),
-            rgba(234, 244, 247, .78)
-        ),
-        url("../engineering-mosaic.svg");
-
-    background-repeat: repeat;
-
-    background-size:
-        auto,
-        420px 420px;
-
-    background-attachment: fixed;
+    background: #071d2b;
 }
 
 body {
     min-height: 100vh;
     background: transparent;
+    position: relative;
+}
+
+
+/* FIGURAS */
+
+body::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    background-image: url("../engineering-mosaic.svg");
+    background-repeat: repeat;
+    background-size: 420px 420px;
+
+    /* Convierte las figuras a blanco */
+    filter: brightness(0) invert(1);
+
+    opacity: 0.25;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* EL CONTENIDO QUEDA ENCIMA DE LAS FIGURAS */
+
+body > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =========================================================
+   BARRA DE NAVEGACIÓN
+========================================================= */
+
+.navbar {
+    background: rgba(7, 29, 43, 0.90) !important;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.20) !important;
+}
+
+.logo {
+    color: #ffffff !important;
+}
+
+nav a {
+    color: #d8edf5 !important;
+}
+
+nav a:hover,
+nav a.active {
+    color: #ffffff !important;
+    background: rgba(43, 190, 232, 0.15) !important;
+}
+
+
+/* =========================================================
+   PORTADA PRINCIPAL
+========================================================= */
+
+.home-hero {
+    background: transparent !important;
+}
+
+.home-intro h1 {
+    color: #ffffff !important;
+}
+
+.home-intro h2 {
+    color: #ffffff !important;
+}
+
+.home-intro h2 span {
+    color: #63d8f5 !important;
+}
+
+.home-description {
+    color: #d2e6ee !important;
+}
+
+.home-kicker {
+    color: #72dcf5 !important;
+
+    background: rgba(50, 195, 235, 0.12) !important;
+
+    border-color: rgba(99, 216, 245, 0.30) !important;
+}
+
+
+/* =========================================================
+   ENCABEZADOS DE LAS OTRAS PÁGINAS
+========================================================= */
+
+.weeks-header,
+.about-header {
+    background: transparent !important;
+}
+
+.weeks-header h1,
+.about-header h1 {
+    color: #ffffff !important;
+}
+
+.weeks-header > p:last-child,
+.about-header > p:last-child {
+    color: #d2e6ee !important;
+}
+
+
+/* =========================================================
+   TÍTULOS DE SECCIONES
+========================================================= */
+
+.week-detail h1,
+.week-detail h2,
+.content-block h2 {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   PIE DE PÁGINA
+========================================================= */
+
+footer {
+    background: rgba(5, 23, 34, 0.95) !important;
+}
+/* =========================================================
+   ENLACES DE LA SECCIÓN SEMANAS
+========================================================= */
+
+.week-card,
+.week-card:visited {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.week-card h2,
+.week-card h3,
+.week-card p {
+    color: inherit;
+    text-decoration: none !important;
+}
+
+.week-card:hover {
+    text-decoration: none !important;
+}
+/* =========================================================
+   TEXTOS DE LAS TARJETAS DE SEMANAS
+========================================================= */
+
+/* Títulos de Semana 01, 02, 03 y 04 */
+.week-card h2,
+.week-card h3 {
+    color: #123b52 !important;
+}
+
+
+/* Descripción de cada semana */
+.week-card p {
+    color: #5b7180 !important;
+}
+
+
+/* Número grande de cada semana */
+.week-card .week-number {
+    color: #35bce8 !important;
+}
+
+
+/* Flechas */
+.week-card span,
+.week-card .arrow {
+    color: #078acb !important;
+}
+
+
+/* =========================================================
+   CONTENIDO DE SEMANA 01
+========================================================= */
+
+/* Títulos dentro de las tarjetas claras */
+.content-block h2,
+.content-block h3 {
+    color: #123b52 !important;
+}
+
+
+/* Texto normal dentro de las tarjetas */
+.content-block p {
+    color: #587386 !important;
+}
+
+
+/* Etiquetas pequeñas */
+.content-block .small-title,
+.content-block .section-label,
+.content-block .evidence-label {
+    color: #078acb !important;
+}
+
+
+/* =========================================================
+   TÍTULOS DE LAS SECCIONES
+========================================================= */
+
+.week-detail h2 {
+    color: #123b52 !important;
+}
+/* =========================================================
+   MENÚ LATERAL DE SEMANAS
+========================================================= */
+
+.week-detail {
+    margin-left: 250px;
+}
+
+
+.weeks-sidebar {
+    position: fixed;
+
+    left: 0;
+    top: 75px;
+    bottom: 0;
+
+    width: 220px;
+
+    padding: 35px 20px;
+
+    background: rgba(5, 25, 38, 0.92);
+
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(15px);
+
+    z-index: 900;
+
+    box-shadow:
+        5px 0 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* TÍTULO */
+
+.sidebar-title {
+    margin-bottom: 35px;
+}
+
+
+.sidebar-title span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #4bc8ed;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+
+.sidebar-title h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 25px;
+}
+
+
+/* LISTA */
+
+.sidebar-weeks {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+/* CADA SEMANA */
+
+.sidebar-week {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 13px 12px;
+
+    border-radius: 12px;
+
+    color: #c7dce5;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: all 0.3s ease;
+}
+
+
+.sidebar-week span {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+
+    color: #5ed5f4;
+
+    background: rgba(50, 195, 235, 0.10);
+
+    border: 1px solid rgba(80, 210, 240, 0.20);
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+
+.sidebar-week:hover {
+    color: #ffffff;
+
+    background: rgba(40, 190, 230, 0.12);
+
+    transform: translateX(4px);
+}
+
+
+/* SEMANA ACTUAL */
+
+.sidebar-week.active {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(20, 185, 230, 0.25),
+            rgba(10, 100, 150, 0.20)
+        );
+
+    border-left: 3px solid #35c8ef;
+}
+
+
+.sidebar-week.active span {
+    color: #ffffff;
+
+    background: #079bd3;
+
+    border-color: #079bd3;
+}
+
+
+/* VOLVER A TODAS */
+
+.sidebar-back {
+    display: block;
+
+    margin-top: 35px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+    color: #72d8f3;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    transition: 0.3s ease;
+}
+
+
+.sidebar-back:hover {
+    color: #ffffff;
+
+    transform: translateX(4px);
+}
+/* =========================================================
+   SEMANA 01: MISMO FONDO CLARO QUE LAS DEMÁS SEMANAS
+========================================================= */
+
+body.week-one-page {
+    background-color: #edf9ff !important;
+
+    background-image:
+        linear-gradient(
+            30deg,
+            rgba(0, 157, 211, 0.045) 12%,
+            transparent 12.5%,
+            transparent 87%,
+            rgba(0, 157, 211, 0.045) 87.5%
+        ),
+        linear-gradient(
+            150deg,
+            rgba(0, 157, 211, 0.045) 12%,
+            transparent 12.5%,
+            transparent 87%,
+            rgba(0, 157, 211, 0.045) 87.5%
+        ),
+        linear-gradient(
+            30deg,
+            rgba(0, 157, 211, 0.025) 12%,
+            transparent 12.5%,
+            transparent 87%,
+            rgba(0, 157, 211, 0.025) 87.5%
+        ) !important;
+
+    background-size: 80px 140px !important;
+    background-attachment: fixed !important;
+}
+
+
+/* Quitamos las figuras blancas del fondo oscuro */
+body.week-one-page::before {
+    display: none !important;
+}
+/* =========================================================
+   COLORES DE TEXTO DE SEMANA 01
+========================================================= */
+
+body.week-one-page .week-detail h1 {
+    color: #103b57 !important;
+}
+
+body.week-one-page .week-detail h2,
+body.week-one-page .content-block h2,
+body.week-one-page .content-block h3 {
+    color: #087fb8 !important;
+}
+
+body.week-one-page .week-detail p {
+    color: #527086 !important;
+}
+
+body.week-one-page .small-title {
+    color: #078acb !important;
+}
+/* =========================================================
+   SOBRE NOSOTROS: FONDO CLARO TECNOLÓGICO
+========================================================= */
+
+body.about-page {
+    background-color: #edf9ff !important;
+
+    background-image:
+        linear-gradient(
+            30deg,
+            rgba(0, 157, 211, 0.045) 12%,
+            transparent 12.5%,
+            transparent 87%,
+            rgba(0, 157, 211, 0.045) 87.5%
+        ),
+        linear-gradient(
+            150deg,
+            rgba(0, 157, 211, 0.045) 12%,
+            transparent 12.5%,
+            transparent 87%,
+            rgba(0, 157, 211, 0.045) 87.5%
+        ),
+        linear-gradient(
+            30deg,
+            rgba(0, 157, 211, 0.025) 12%,
+            transparent 12.5%,
+            transparent 87%,
+            rgba(0, 157, 211, 0.025) 87.5%
+        ) !important;
+
+    background-size: 80px 140px !important;
+    background-attachment: fixed !important;
+}
+
+
+/* Quitamos el patrón blanco del fondo oscuro */
+body.about-page::before {
+    display: none !important;
+}
+/* =========================================================
+   COLORES DE SOBRE NOSOTROS
+========================================================= */
+
+body.about-page .about-header h1 {
+    color: #103b57 !important;
+}
+
+body.about-page .about-header > p:last-child {
+    color: #527086 !important;
+}
+
+body.about-page .small-title {
+    color: #078acb !important;
+}
+/* SEMANA 02: mismo fondo claro que Semana 01 */
+body.week-two-page {
+    background-color: #edf9ff !important;
+
+    background-image:
+        linear-gradient(
+            30deg,
+            rgba(0, 157, 211, 0.045) 12%,
+            transparent 12.5%,
+            transparent 87%,
+            rgba(0, 157, 211, 0.045) 87.5%
+        ),
+        linear-gradient(
+            150deg,
+            rgba(0, 157, 211, 0.045) 12%,
+            transparent 12.5%,
+            transparent 87%,
+            rgba(0, 157, 211, 0.045) 87.5%
+        ),
+        linear-gradient(
+            30deg,
+            rgba(0, 157, 211, 0.025) 12%,
+            transparent 12.5%,
+            transparent 87%,
+            rgba(0, 157, 211, 0.025) 87.5%
+        ) !important;
+
+    background-size: 80px 140px !important;
+    background-attachment: fixed !important;
+}
+
+/* Oculta el mosaico oscuro solo en Semana 02 */
+body.week-two-page::before {
+    display: none !important;
+}
+
+/* Colores de texto para Semana 02 */
+body.week-two-page .week-detail h1 {
+    color: #103b57 !important;
+}
+
+body.week-two-page .week-detail h2,
+body.week-two-page .content-block h2,
+body.week-two-page .content-block h3 {
+    color: #087fb8 !important;
+}
+
+body.week-two-page .week-detail p {
+    color: #527086 !important;
+}
+
+body.week-two-page .small-title {
+    color: #078acb !important;
 }

@@ -4383,3 +4383,8 @@ footer p {
     }
 
 }
+.software-cards .idea-card {
+    height: auto !important;
+    min-height: 0 !important;
+    padding-bottom: 24px;
+}
