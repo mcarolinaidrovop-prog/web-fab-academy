@@ -576,3 +576,576 @@ body.week-two-page .week-detail p {
 body.week-two-page .small-title {
     color: #078acb !important;
 }
+
+/* =========================================================
+   SEMANA 03 · FABRICACIÓN ADITIVA
+========================================================= */
+
+.week-three-page {
+    max-width: 1450px;
+    padding-top: 45px;
+    padding-bottom: 70px;
+}
+
+.week-three-page > h1 {
+    color: #103b57 !important;
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 1.05;
+    margin: 12px 0;
+    letter-spacing: -2px;
+}
+
+.week-three-subtitle {
+    color: #078acb !important;
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.week-three-intro {
+    padding: 25px 30px;
+    margin: 25px 0;
+    border-left: 4px solid #19bce8;
+    border-radius: 0 16px 16px 0;
+    background: rgba(255, 255, 255, 0.88);
+    box-shadow: 0 8px 25px rgba(0, 100, 150, 0.06);
+}
+
+.week-three-intro p {
+    color: #527086 !important;
+    font-size: 16px;
+    line-height: 1.85;
+    margin: 0;
+}
+
+.week-three-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin: 28px 0 45px;
+}
+
+.week-three-stat {
+    position: relative;
+    overflow: hidden;
+    padding: 24px;
+    border: 1px solid #c7edfb;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 8px 24px rgba(0, 110, 160, 0.06);
+}
+
+.week-three-stat span {
+    color: #079bd3;
+    font-size: 35px;
+    font-weight: 800;
+}
+
+.week-three-stat p {
+    margin: 7px 0 3px;
+    color: #103b57;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.week-three-stat small {
+    color: #698394;
+    font-size: 12px;
+}
+
+.week-three-panel {
+    margin: 30px 0;
+    padding: 30px;
+    border: 1px solid #c8edfa;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.90);
+    box-shadow: 0 10px 30px rgba(0, 110, 160, 0.05);
+}
+
+.week-three-label,
+.week-three-heading > span {
+    color: #078acb;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.week-three-panel h2,
+.week-three-heading h2 {
+    margin: 12px 0;
+    color: #103b57 !important;
+    font-size: clamp(24px, 3vw, 32px);
+}
+
+.week-three-panel > p,
+.week-three-heading > p {
+    color: #587386 !important;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.week-three-section {
+    margin: 48px 0;
+}
+
+.week-three-heading {
+    margin-bottom: 22px;
+}
+
+.week-three-heading > p {
+    margin-top: 8px;
+}
+
+.week-three-steps {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.week-three-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+    padding: 24px;
+    border: 1px solid #c8edfa;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.91);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.week-three-step:hover,
+.week-three-tool:hover,
+.week-three-evidence:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(0, 110, 160, 0.12);
+}
+
+.week-three-step-number {
+    display: flex;
+    flex: 0 0 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 13px;
+    background: #e2f8ff;
+    color: #078acb;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.week-three-step h3,
+.week-three-tool h3,
+.week-three-evidence h3 {
+    color: #103b57;
+    font-size: 17px;
+    margin: 3px 0 10px;
+}
+
+.week-three-step p,
+.week-three-tool p,
+.week-three-evidence p {
+    color: #587386;
+    font-size: 14px;
+    line-height: 1.75;
+    margin: 0;
+}
+
+.week-three-tag {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #e5f8ff;
+    color: #087fb8;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.week-three-tools {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.week-three-tool {
+    padding: 26px;
+    border: 1px solid #c8edfa;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.92);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.week-three-tool-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 18px;
+    border-radius: 15px;
+    background: #e3f8ff;
+    font-size: 26px;
+}
+
+.week-three-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.week-three-evidence {
+    overflow: hidden;
+    border: 1px solid #c8edfa;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 8px 25px rgba(0, 110, 160, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.week-three-evidence img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    background: #e2f6fd;
+}
+
+.week-three-evidence-caption {
+    padding: 20px 23px 24px;
+}
+
+.week-three-evidence-caption > span {
+    color: #079bd3;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.week-three-evidence h3 {
+    margin-top: 9px;
+}
+
+.week-three-learning ul {
+    padding-left: 23px;
+    color: #587386;
+    line-height: 1.9;
+}
+
+.week-three-learning li {
+    margin: 8px 0;
+    padding-left: 5px;
+}
+
+.week-three-bottom-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 45px;
+}
+
+.week-three-bottom-nav a {
+    display: inline-block;
+    padding: 13px 18px;
+    border: 1px solid #bce8f8;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.92);
+    color: #087fb8;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.week-three-bottom-nav a:hover {
+    background: #e1f7ff;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 1000px) {
+    .week-three-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .week-three-tools {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .week-three-page {
+        padding: 30px 18px 50px;
+    }
+
+    .week-three-stats,
+    .week-three-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .week-three-intro,
+    .week-three-panel {
+        padding: 22px;
+    }
+
+    .week-three-evidence img {
+        height: 240px;
+    }
+
+    .week-three-bottom-nav {
+        flex-direction: column;
+    }
+
+    .week-three-bottom-nav a {
+        text-align: center;
+    }
+}
+
+
+/* =========================================================
+   SEMANA 03: FONDO GEOMÉTRICO CELESTE
+========================================================= */
+
+/* Fondo claro con patrón geométrico */
+html:has(body.week-three-page) {
+    background-color: #edf9ff !important;
+    background-image:
+        linear-gradient(
+            30deg,
+            rgba(0, 157, 211, 0.045) 12%,
+            transparent 12.5%,
+            transparent 87%,
+            rgba(0, 157, 211, 0.045) 87.5%
+        ),
+        linear-gradient(
+            150deg,
+            rgba(0, 157, 211, 0.045) 12%,
+            transparent 12.5%,
+            transparent 87%,
+            rgba(0, 157, 211, 0.045) 87.5%
+        ),
+        linear-gradient(
+            30deg,
+            rgba(0, 157, 211, 0.025) 12%,
+            transparent 12.5%,
+            transparent 87%,
+            rgba(0, 157, 211, 0.025) 87.5%
+        ) !important;
+    background-size: 80px 140px !important;
+    background-repeat: repeat !important;
+    background-attachment: fixed !important;
+}
+
+/* Evita que aparezca encima el mosaico blanco */
+body.week-three-page::before {
+    display: none !important;
+}
+
+/* Fondo transparente para el contenido principal */
+body.week-three-page {
+    min-height: 100vh;
+    margin: 0;
+    background: transparent !important;
+}
+
+body.week-three-page main,
+body.week-three-page .week-detail {
+    background: transparent !important;
+}
+
+/* Espaciado del contenido */
+body.week-three-page .week-detail {
+    max-width: 1450px;
+    padding-top: 45px;
+    padding-bottom: 70px;
+}
+
+/* Título principal */
+body.week-three-page .week-detail h1 {
+    color: #103b57 !important;
+    line-height: 1.1;
+}
+
+/* Subtítulos */
+body.week-three-page .week-three-subtitle {
+    color: #078acb !important;
+}
+
+/* Etiquetas pequeñas */
+body.week-three-page .small-title,
+body.week-three-page .week-three-label,
+body.week-three-page .week-three-heading > span {
+    color: #078acb !important;
+}
+
+/* Textos y tarjetas */
+body.week-three-page .week-three-intro,
+body.week-three-page .week-three-stat,
+body.week-three-page .week-three-panel,
+body.week-three-page .week-three-step,
+body.week-three-page .week-three-tool,
+body.week-three-page .week-three-evidence {
+    background-color: rgba(255, 255, 255, 0.93);
+}
+
+/* Títulos de las tarjetas */
+body.week-three-page .week-three-panel h2,
+body.week-three-page .week-three-heading h2,
+body.week-three-page .week-three-step h3,
+body.week-three-page .week-three-tool h3,
+body.week-three-page .week-three-evidence h3 {
+    color: #103b57 !important;
+}
+
+/* Párrafos */
+body.week-three-page .week-three-intro p,
+body.week-three-page .week-three-panel > p,
+body.week-three-page .week-three-heading > p,
+body.week-three-page .week-three-step p,
+body.week-three-page .week-three-tool p,
+body.week-three-page .week-three-evidence p {
+    color: #527086 !important;
+}
+
+/* Navegación inferior */
+body.week-three-page .week-three-bottom-nav a {
+    color: #087fb8 !important;
+    text-decoration: none;
+}
+
+/* Adaptación a teléfonos */
+@media (max-width: 700px) {
+    body.week-three-page .week-detail {
+        padding: 30px 18px 50px;
+    }
+}
+body.week-four-page {
+    background-color: #edf9ff !important;
+    background-image:
+        linear-gradient(
+            30deg,
+            rgba(0, 157, 211, 0.045) 12%,
+            transparent 12.5%,
+            transparent 87%,
+            rgba(0, 157, 211, 0.045) 87.5%
+        ),
+        linear-gradient(
+            150deg,
+            rgba(0, 157, 211, 0.045) 12%,
+            transparent 12.5%,
+            transparent 87%,
+            rgba(0, 157, 211, 0.045) 87.5%
+        ),
+        linear-gradient(
+            30deg,
+            rgba(0, 157, 211, 0.025) 12%,
+            transparent 12.5%,
+            transparent 87%,
+            rgba(0, 157, 211, 0.025) 87.5%
+        ) !important;
+    background-size: 80px 140px !important;
+    background-attachment: fixed !important;
+}
+
+body.week-four-page::before {
+    display: none !important;
+}
+
+body.week-four-page .week-detail h1 {
+    color: #103b57 !important;
+}
+
+body.week-four-page .week-detail h2,
+body.week-four-page .content-block h2,
+body.week-four-page .content-block h3 {
+    color: #087fb8 !important;
+}
+
+body.week-four-page .week-detail p {
+    color: #527086 !important;
+}
+
+body.week-four-page .small-title {
+    color: #078acb !important;
+}
+
+/* =========================================================
+   SEMANA 04: CORREGIR DISTRIBUCIÓN DE LAS TARJETAS
+========================================================= */
+
+/* Mantener los párrafos en la columna derecha */
+body.week-four-page .content-block > p {
+    grid-column: 2 !important;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-top: 0;
+    margin-bottom: 12px;
+    line-height: 1.8;
+    overflow-wrap: break-word;
+}
+
+/* Alinear los títulos en la columna izquierda */
+body.week-four-page .content-block > h2 {
+    grid-column: 1 !important;
+    align-self: start;
+    margin-top: 0;
+}
+
+/* Evitar que los saltos de línea creen espacios extraños */
+body.week-four-page .content-block > br {
+    display: none;
+}
+
+/* Dar un poco más de aire al contenido */
+body.week-four-page .content-block {
+    align-items: start;
+    row-gap: 12px;
+}
+
+/* En móviles, apilar título y texto */
+@media (max-width: 700px) {
+    body.week-four-page .content-block > h2,
+    body.week-four-page .content-block > p {
+        grid-column: 1 !important;
+    }
+}
+
+/* =========================================================
+   SEMANA 05: CORREGIR DISTRIBUCIÓN DE LAS TARJETAS
+========================================================= */
+
+/* Mantener los párrafos en la columna derecha */
+body.week-five-page .content-block > p {
+    grid-column: 2 !important;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-top: 0;
+    margin-bottom: 12px;
+    line-height: 1.8;
+    overflow-wrap: break-word;
+}
+
+/* Alinear los títulos en la columna izquierda */
+body.week-five-page .content-block > h2 {
+    grid-column: 1 !important;
+    align-self: start;
+    margin-top: 0;
+}
+
+/* Evitar que los saltos de línea creen espacios extraños */
+body.week-five-page .content-block > br {
+    display: none;
+}
+
+/* Dar más espacio al contenido */
+body.week-five-page .content-block {
+    align-items: start;
+    row-gap: 12px;
+}
+
+/* En móviles, apilar título y texto */
+@media (max-width: 700px) {
+    body.week-five-page .content-block > h2,
+    body.week-five-page .content-block > p {
+        grid-column: 1 !important;
+    }
+}

@@ -3187,28 +3187,39 @@ footer p {
    DETALLES DECORATIVOS
 ========================================================= */
 
-.week-detail::before {
 
+.week-detail::before {
     content: "01";
 
     position: absolute;
-
     right: 4%;
-
     top: 170px;
 
     font-size: 220px;
-
     font-weight: bold;
-
     line-height: 1;
 
-    color: rgba(34,180,225,0.055);
+    color: rgba(34, 180, 225, 0.055);
 
     pointer-events: none;
-
 }
 
+/* Número correcto para cada semana */
+body.week-one-page .week-detail::before {
+    content: "01";
+}
+
+body.week-two-page .week-detail::before {
+    content: "02";
+}
+
+body.week-three-page .week-detail::before {
+    content: "03";
+}
+
+body.week-four-page .week-detail::before {
+    content: "04";
+}
 
 /* =========================================================
    RESPONSIVE
@@ -4387,4 +4398,180 @@ footer p {
     height: auto !important;
     min-height: 0 !important;
     padding-bottom: 24px;
+}
+
+
+/* =========================================================
+   CORRECCIÓN FINAL: SEMANA 03
+   Mantiene intactos los estilos de las demás páginas.
+========================================================= */
+
+/* El fondo claro geométrico de Semana 03 debe coincidir con Semana 02.
+   La clase week-three-page está puesta en el BODY, no en el contenido. */
+body.week-three-page {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #edf9ff !important;
+    background-image:
+        linear-gradient(
+            30deg,
+            rgba(0, 157, 211, 0.045) 12%,
+            transparent 12.5%,
+            transparent 87%,
+            rgba(0, 157, 211, 0.045) 87.5%
+        ),
+        linear-gradient(
+            150deg,
+            rgba(0, 157, 211, 0.045) 12%,
+            transparent 12.5%,
+            transparent 87%,
+            rgba(0, 157, 211, 0.045) 87.5%
+        ),
+        linear-gradient(
+            30deg,
+            rgba(0, 157, 211, 0.025) 12%,
+            transparent 12.5%,
+            transparent 87%,
+            rgba(0, 157, 211, 0.025) 87.5%
+        ) !important;
+    background-size: 80px 140px !important;
+    background-repeat: repeat !important;
+    background-attachment: fixed !important;
+}
+
+/* Evita que el mosaico oscuro global tape el patrón celeste. */
+body.week-three-page::before {
+    display: none !important;
+}
+
+/* El contenido queda por encima del fondo y no crea una franja blanca. */
+body.week-three-page main,
+body.week-three-page .week-detail {
+    background: transparent !important;
+}
+
+/* En el HTML, el h1 está dentro de .week-detail.
+   Por eso .week-three-page > h1 no encontraba el título. */
+body.week-three-page .week-detail h1 {
+    color: #103b57 !important;
+    font-size: clamp(48px, 5vw, 68px) !important;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+}
+
+body.week-three-page .week-detail .small-title {
+    color: #078acb !important;
+}
+
+body.week-three-page .week-detail h2,
+body.week-three-page .week-detail h3 {
+    color: #087fb8;
+}
+
+body.week-three-page .week-detail p {
+    color: #527086;
+}
+
+/* Asegura que las tarjetas sigan siendo claras. */
+body.week-three-page .content-block,
+body.week-three-page .stat-card,
+body.week-three-page .idea-card,
+body.week-three-page .evidence-card,
+body.week-three-page .week-three-intro,
+body.week-three-page .week-three-stat,
+body.week-three-page .week-three-panel,
+body.week-three-page .week-three-step,
+body.week-three-page .week-three-tool,
+body.week-three-page .week-three-evidence {
+    background-color: rgba(255, 255, 255, 0.92);
+}
+
+/* Ajustes para móviles sin cambiar Semana 02. */
+@media (max-width: 700px) {
+    body.week-three-page .week-detail {
+        padding: 30px 18px 50px;
+    }
+
+    body.week-three-page .week-detail h1 {
+        font-size: 42px !important;
+    }
+}
+
+
+/* SEMANA 05: MISMO DISEÑO QUE LAS SEMANAS ANTERIORES */
+
+body.week-five-page .week-detail::before {
+    content: "05";
+}
+
+body.week-five-page {
+    background-color: #edf9ff !important;
+    background-image:
+        linear-gradient(
+            30deg,
+            rgba(0, 157, 211, 0.045) 12%,
+            transparent 12.5%,
+            transparent 87%,
+            rgba(0, 157, 211, 0.045) 87.5%
+        ),
+        linear-gradient(
+            150deg,
+            rgba(0, 157, 211, 0.045) 12%,
+            transparent 12.5%,
+            transparent 87%,
+            rgba(0, 157, 211, 0.045) 87.5%
+        ),
+        linear-gradient(
+            30deg,
+            rgba(0, 157, 211, 0.025) 12%,
+            transparent 12.5%,
+            transparent 87%,
+            rgba(0, 157, 211, 0.025) 87.5%
+        ) !important;
+    background-size: 80px 140px !important;
+    background-attachment: fixed !important;
+}
+
+body.week-five-page::before {
+    display: none !important;
+}
+
+body.week-five-page main,
+body.week-five-page .week-detail {
+    background: transparent !important;
+}
+
+body.week-five-page .week-detail h1 {
+    color: #103b57 !important;
+}
+
+body.week-five-page .week-intro,
+body.week-five-page .stat-card,
+body.week-five-page .content-block,
+body.week-five-page .idea-card,
+body.week-five-page .evidence-card {
+    background-color: rgba(255, 255, 255, 0.94) !important;
+}
+
+body.week-five-page .content-block h2,
+body.week-five-page .content-block h3,
+body.week-five-page .idea-card h3 {
+    color: #123b52 !important;
+}
+
+body.week-five-page .week-intro,
+body.week-five-page .content-block p,
+body.week-five-page .idea-card p,
+body.week-five-page .stat-label,
+body.week-five-page .evidence-caption p {
+    color: #527086 !important;
+}
+
+body.week-five-page .small-title,
+body.week-five-page .evidence-label,
+body.week-five-page .idea-number,
+body.week-five-page .stat-number {
+    color: #078acb !important;
 }
