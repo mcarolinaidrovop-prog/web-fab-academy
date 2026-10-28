@@ -4575,3 +4575,284 @@ body.week-five-page .idea-number,
 body.week-five-page .stat-number {
     color: #078acb !important;
 }
+
+/* =====================================================
+   CORRECCIÓN DE ESPACIOS: SEMANA 04
+   Mantiene el diseño y el contenido de la página.
+===================================================== */
+
+/* Evita que el contenido se salga del ancho de la página */
+body.week-four-page .week-detail {
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+    min-width: 0;
+}
+
+body.week-four-page .content-block {
+    width: 100%;
+    min-width: 0;
+}
+
+/* Corrige los márgenes laterales que pueden desbordar */
+body.week-four-page .content-block:nth-of-type(3) {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    padding: 30px;
+}
+
+/* Tarjetas del procedimiento y cuadrícula */
+body.week-four-page .project-ideas,
+body.week-four-page .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    width: 100%;
+    min-width: 0;
+    margin-top: 22px;
+    align-items: stretch;
+}
+
+/* Elimina la altura exagerada que deja espacio vacío */
+body.week-four-page .idea-card,
+body.week-four-page .dashboard-card {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    min-height: 0;
+    padding: 24px;
+    overflow-wrap: anywhere;
+}
+
+/* Ajusta los textos sin cambiar su contenido */
+body.week-four-page .idea-number {
+    margin: 0 0 12px;
+}
+
+body.week-four-page .idea-card h3,
+body.week-four-page .dashboard-card h2 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    line-height: 1.35;
+}
+
+body.week-four-page .idea-card p,
+body.week-four-page .dashboard-card p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Evita que las decoraciones interfieran con el contenido */
+body.week-four-page .idea-card::before {
+    pointer-events: none;
+}
+
+/* Tablets: dos columnas */
+@media (max-width: 950px) {
+    body.week-four-page .project-ideas,
+    body.week-four-page .dashboard-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Celulares: una columna */
+@media (max-width: 600px) {
+    body.week-four-page .content-block:nth-of-type(3) {
+        padding: 20px;
+    }
+
+    body.week-four-page .project-ideas,
+    body.week-four-page .dashboard-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    body.week-four-page .idea-card,
+    body.week-four-page .dashboard-card {
+        padding: 22px;
+    }
+}
+
+
+/* =====================================================
+   AJUSTE DE TARJETAS EN LA PÁGINA "SEMANAS"
+   Reduce espacios vacíos sin alterar el contenido.
+===================================================== */
+
+.weeks-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 20px;
+    padding: 30px 7% 70px;
+}
+
+.weeks-container .week-card {
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    height: auto;
+    padding: 24px;
+    gap: 20px;
+    grid-template-columns: 65px minmax(0, 1fr) 25px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.weeks-container .week-card h2,
+.weeks-container .week-card h3 {
+    margin: 0 0 8px;
+    line-height: 1.3;
+}
+
+.weeks-container .week-card p {
+    margin: 0;
+    line-height: 1.55;
+}
+
+.weeks-container .week-number {
+    font-size: 38px;
+    line-height: 1;
+}
+
+.weeks-container .week-card .arrow {
+    justify-self: end;
+}
+
+/* Tablets y celulares */
+@media (max-width: 800px) {
+    .weeks-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 25px 5% 50px;
+    }
+
+    .weeks-container .week-card {
+        grid-template-columns: 55px minmax(0, 1fr) 20px;
+        padding: 20px;
+        gap: 14px;
+    }
+
+    .weeks-container .week-number {
+        font-size: 30px;
+    }
+}
+
+/* =====================================================
+   AJUSTE DE TARJETAS EN LA PÁGINA "SEMANAS"
+   Reduce espacios vacíos sin alterar el contenido.
+===================================================== */
+
+.weeks-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 20px;
+    padding: 30px 7% 70px;
+}
+
+.weeks-container .week-card {
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    height: auto;
+    padding: 24px;
+    gap: 20px;
+    grid-template-columns: 65px minmax(0, 1fr) 25px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.weeks-container .week-card h2,
+.weeks-container .week-card h3 {
+    margin: 0 0 8px;
+    line-height: 1.3;
+}
+
+.weeks-container .week-card p {
+    margin: 0;
+    line-height: 1.55;
+}
+
+.weeks-container .week-number {
+    font-size: 38px;
+    line-height: 1;
+}
+
+.weeks-container .week-card .arrow {
+    justify-self: end;
+}
+
+/* Tablets y celulares */
+@media (max-width: 800px) {
+    .weeks-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 25px 5% 50px;
+    }
+
+    .weeks-container .week-card {
+        grid-template-columns: 55px minmax(0, 1fr) 20px;
+        padding: 20px;
+        gap: 14px;
+    }
+
+    .weeks-container .week-number {
+        font-size: 30px;
+    }
+}
+
+
+/* =====================================================
+   CORRECCIÓN DE TARJETAS: SEMANAS 03 Y 05
+   Reduce espacios vacíos sin cambiar el diseño.
+===================================================== */
+
+/* Semana 03 */
+body.week-three-page .project-ideas .idea-card,
+body.week-three-page .idea-card {
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 22px !important;
+    box-sizing: border-box;
+}
+
+/* Semana 05 */
+body.week-five-page .project-ideas .idea-card,
+body.week-five-page .idea-card {
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 22px !important;
+    box-sizing: border-box;
+}
+
+/* Evita espacios innecesarios dentro de las tarjetas */
+body.week-three-page .idea-card h3,
+body.week-five-page .idea-card h3 {
+    margin-top: 8px;
+    margin-bottom: 10px;
+    line-height: 1.35;
+}
+
+body.week-three-page .idea-card p,
+body.week-five-page .idea-card p {
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+/* Mantiene las columnas ordenadas */
+body.week-three-page .project-ideas,
+body.week-five-page .project-ideas {
+    align-items: start;
+    grid-auto-rows: auto;
+    gap: 20px;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+    body.week-three-page .project-ideas,
+    body.week-five-page .project-ideas {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
