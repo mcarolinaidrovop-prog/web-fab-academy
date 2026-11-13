@@ -4856,3 +4856,28 @@ body.week-five-page .project-ideas {
         grid-template-columns: minmax(0, 1fr);
     }
 }
+/* IMÁGENES DE EVIDENCIA - SEMANA 06 */
+
+.week-six-page .evidence-image {
+    width: 100%;
+    max-width: 850px;
+    margin: 25px auto;
+    text-align: center;
+}
+
+.week-six-page .evidence-image img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 16px;
+    display: block;
+    margin: auto;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+}
+
+.week-six-page .image-caption {
+    margin-top: 12px;
+    font-size: 14px;
+    text-align: center;
+    opacity: 0.8;
+}
