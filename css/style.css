@@ -4881,3 +4881,803 @@ body.week-five-page .project-ideas {
     text-align: center;
     opacity: 0.8;
 }
+
+/* ==================================================
+   SEMANA 06 - DISEÑO GENERAL
+================================================== */
+
+body.week-six-page {
+    background: #102b3b !important;
+    color: #eaf4fa !important;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* FONDO */
+
+body.week-six-page main.week-content {
+    margin-left: 255px !important;
+    width: calc(100% - 275px) !important;
+    max-width: 1250px !important;
+    padding: 35px 35px 60px !important;
+    box-sizing: border-box;
+}
+
+/* ENCABEZADO */
+
+.week-six-page .weeks-header {
+    background: linear-gradient(135deg, #163d53, #1c526b) !important;
+    border: 1px solid rgba(93, 207, 237, 0.35);
+    border-radius: 20px;
+    padding: 38px !important;
+    margin: 0 0 35px !important;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.week-six-page .weeks-header .small-title {
+    color: #61d5f0 !important;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.week-six-page .weeks-header h1 {
+    color: #ffffff !important;
+    font-size: clamp(32px, 4vw, 48px);
+    margin: 10px 0;
+}
+
+.week-six-page .weeks-header p {
+    color: #d5e8f1 !important;
+    line-height: 1.8;
+    max-width: 800px;
+}
+
+/* BARRA LATERAL */
+
+.week-six-page .week-sidebar {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    bottom: 0;
+    width: 235px;
+    padding: 25px 16px 20px;
+    background: #0b202e;
+    border-right: 1px solid rgba(100, 210, 240, 0.2);
+    box-sizing: border-box;
+    overflow-y: auto;
+    z-index: 900;
+}
+
+.week-six-page .sidebar-heading {
+    padding: 0 10px 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    margin-bottom: 15px;
+}
+
+.week-six-page .sidebar-heading span {
+    color: #53d4ef;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.week-six-page .sidebar-heading h3 {
+    color: white;
+    font-size: 21px;
+    margin: 8px 0 0;
+}
+
+.week-six-page .sidebar-weeks {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.week-six-page .sidebar-weeks a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 9px 11px;
+    color: #c5d6e0 !important;
+    text-decoration: none !important;
+    border-radius: 9px;
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+
+.week-six-page .sidebar-weeks a span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 27px;
+    height: 27px;
+    border-radius: 7px;
+    background: #19394b;
+    color: #7edff4;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.week-six-page .sidebar-weeks a:hover {
+    background: #183d51;
+    color: white !important;
+    transform: translateX(3px);
+}
+
+.week-six-page .sidebar-weeks a.active {
+    background: #164b63;
+    color: white !important;
+    font-weight: 700;
+    border-left: 3px solid #51d5f0;
+}
+
+.week-six-page .sidebar-weeks a.active span {
+    background: #51c9e8;
+    color: #092536;
+}
+
+.week-six-page .sidebar-back {
+    display: block;
+    margin-top: 20px;
+    padding: 14px 9px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    color: #67d8f0 !important;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/* SECCIONES */
+
+.week-six-page .week-section {
+    margin: 0 0 32px !important;
+    padding: 28px !important;
+    background: #17384b !important;
+    border: 1px solid rgba(116, 206, 231, 0.18);
+    border-radius: 17px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.week-six-page .week-section > h2 {
+    color: #72d9f1 !important;
+    font-size: 25px;
+    margin: 0 0 22px !important;
+    padding-bottom: 13px;
+    border-bottom: 1px solid rgba(255,255,255,0.13);
+}
+
+/* TARJETAS */
+
+.week-six-page .project-ideas {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    align-items: start !important;
+    grid-auto-rows: auto !important;
+    gap: 18px !important;
+}
+
+.week-six-page .idea-card,
+.week-six-page .content-card {
+    height: auto !important;
+    min-height: 0 !important;
+    box-sizing: border-box !important;
+    padding: 23px !important;
+    background: #21475b !important;
+    border: 1px solid rgba(113, 210, 235, 0.25);
+    border-radius: 13px;
+    color: #eaf4fa !important;
+}
+
+.week-six-page .idea-card h3,
+.week-six-page .content-card h3 {
+    color: #72d9f1 !important;
+    font-size: 19px;
+    margin: 0 0 12px !important;
+}
+
+.week-six-page .idea-card p,
+.week-six-page .content-card p {
+    color: #d6e5ec !important;
+    font-size: 14px;
+    line-height: 1.8 !important;
+    margin: 0 0 12px;
+}
+
+.week-six-page .content-card p:last-child,
+.week-six-page .idea-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* PROCEDIMIENTO */
+
+.week-six-page .process-card {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 18px !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 0 20px !important;
+    padding: 23px !important;
+    box-sizing: border-box;
+    background: #21475b !important;
+    border: 1px solid rgba(113, 210, 235, 0.22);
+    border-radius: 14px;
+    color: #eaf4fa !important;
+}
+
+.week-six-page .process-number {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: #56cde9;
+    color: #0c2a3a !important;
+    font-weight: 800;
+}
+
+.week-six-page .process-card > div {
+    flex: 1;
+    min-width: 0;
+}
+
+.week-six-page .process-card h3 {
+    color: #75ddf3 !important;
+    font-size: 20px;
+    margin: 3px 0 15px !important;
+}
+
+.week-six-page .process-card h4 {
+    color: #a6e8f6 !important;
+    font-size: 16px;
+    margin: 18px 0 8px !important;
+}
+
+.week-six-page .process-card p {
+    color: #d7e7ee !important;
+    font-size: 14px;
+    line-height: 1.85 !important;
+    margin: 0 0 13px !important;
+}
+
+/* IMÁGENES */
+
+.week-six-page .evidence-image {
+    width: 100%;
+    max-width: 850px;
+    margin: 25px auto 8px !important;
+    text-align: center;
+}
+
+.week-six-page .evidence-image img {
+    display: block;
+    width: 100%;
+    max-height: 490px;
+    object-fit: contain;
+    margin: auto;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: #102b3b;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+.week-six-page .image-caption {
+    color: #a9cbd9 !important;
+    font-size: 12px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+/* LISTAS */
+
+.week-six-page .content-card ul {
+    padding-left: 22px;
+    color: #d7e7ee;
+    line-height: 1.9;
+}
+
+.week-six-page .content-card li {
+    margin-bottom: 9px;
+}
+
+.week-six-page .content-card strong {
+    color: #83e0f3;
+}
+
+/* SUBTÍTULOS */
+
+.week-six-page .subsection-title {
+    color: #a5e8f5 !important;
+    font-size: 19px;
+    margin: 28px 0 15px !important;
+}
+
+/* NAVEGACIÓN INFERIOR */
+
+.week-six-page .week-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 30px 0;
+}
+
+.week-six-page .week-nav-link {
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: 9px;
+    background: #1d526b;
+    color: white !important;
+    text-decoration: none !important;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.week-six-page .week-nav-link:hover {
+    background: #287b99;
+}
+
+/* PIE DE PÁGINA */
+
+.week-six-page footer {
+    margin-left: 235px;
+    text-align: center;
+    color: #a9cbd9;
+    padding: 25px;
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 850px) {
+
+    .week-six-page .week-sidebar {
+        position: relative;
+        top: auto;
+        width: 100%;
+        height: auto;
+        max-height: 230px;
+        border-right: none;
+        border-bottom: 1px solid rgba(100,210,240,0.2);
+    }
+
+    .week-six-page .sidebar-weeks {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .week-six-page main.week-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding: 22px 15px !important;
+    }
+
+    .week-six-page footer {
+        margin-left: 0;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .week-six-page .project-ideas {
+        grid-template-columns: 1fr !important;
+    }
+
+    .week-six-page .week-section {
+        padding: 18px !important;
+    }
+
+    .week-six-page .process-card {
+        padding: 15px !important;
+        gap: 11px !important;
+    }
+
+    .week-six-page .weeks-header {
+        padding: 23px !important;
+    }
+
+}
+
+/* ==================================================
+   SEMANA 06 - DISEÑO GENERAL
+================================================== */
+
+body.week-six-page {
+    background: #102b3b !important;
+    color: #eaf4fa !important;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* CONTENIDO PRINCIPAL */
+
+.week-six-page main.week-content {
+    margin-left: 255px !important;
+    width: calc(100% - 275px) !important;
+    max-width: 1250px !important;
+    padding: 35px 35px 60px !important;
+    box-sizing: border-box;
+}
+
+/* ENCABEZADO */
+
+.week-six-page .weeks-header {
+    background: linear-gradient(135deg, #163d53, #1c526b) !important;
+    border: 1px solid rgba(93, 207, 237, 0.35);
+    border-radius: 20px;
+    padding: 38px !important;
+    margin: 0 0 35px !important;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.week-six-page .weeks-header .small-title {
+    color: #61d5f0 !important;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.week-six-page .weeks-header h1 {
+    color: #ffffff !important;
+    font-size: clamp(32px, 4vw, 48px);
+    margin: 10px 0;
+}
+
+.week-six-page .weeks-header p {
+    color: #d5e8f1 !important;
+    line-height: 1.8;
+    max-width: 800px;
+}
+
+/* BARRA LATERAL */
+
+.week-six-page .week-sidebar {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    bottom: 0;
+    width: 235px;
+    padding: 25px 16px 20px;
+    background: #0b202e;
+    border-right: 1px solid rgba(100, 210, 240, 0.2);
+    box-sizing: border-box;
+    overflow-y: auto;
+    z-index: 900;
+}
+
+.week-six-page .sidebar-heading {
+    padding: 0 10px 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    margin-bottom: 15px;
+}
+
+.week-six-page .sidebar-heading span {
+    color: #53d4ef;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.week-six-page .sidebar-heading h3 {
+    color: white;
+    font-size: 21px;
+    margin: 8px 0 0;
+}
+
+.week-six-page .sidebar-weeks {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.week-six-page .sidebar-weeks a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 9px 11px;
+    color: #c5d6e0 !important;
+    text-decoration: none !important;
+    border-radius: 9px;
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+
+.week-six-page .sidebar-weeks a span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 27px;
+    height: 27px;
+    border-radius: 7px;
+    background: #19394b;
+    color: #7edff4;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.week-six-page .sidebar-weeks a:hover {
+    background: #183d51;
+    color: white !important;
+    transform: translateX(3px);
+}
+
+.week-six-page .sidebar-weeks a.active {
+    background: #164b63;
+    color: white !important;
+    font-weight: 700;
+    border-left: 3px solid #51d5f0;
+}
+
+.week-six-page .sidebar-weeks a.active span {
+    background: #51c9e8;
+    color: #092536;
+}
+
+.week-six-page .sidebar-back {
+    display: block;
+    margin-top: 20px;
+    padding: 14px 9px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    color: #67d8f0 !important;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/* SECCIONES */
+
+.week-six-page .week-section {
+    margin: 0 0 32px !important;
+    padding: 28px !important;
+    background: #17384b !important;
+    border: 1px solid rgba(116, 206, 231, 0.18);
+    border-radius: 17px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.week-six-page .week-section > h2 {
+    color: #72d9f1 !important;
+    font-size: 25px;
+    margin: 0 0 22px !important;
+    padding-bottom: 13px;
+    border-bottom: 1px solid rgba(255,255,255,0.13);
+}
+
+/* TARJETAS */
+
+.week-six-page .project-ideas {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    align-items: start !important;
+    grid-auto-rows: auto !important;
+    gap: 18px !important;
+}
+
+.week-six-page .idea-card,
+.week-six-page .content-card {
+    height: auto !important;
+    min-height: 0 !important;
+    box-sizing: border-box !important;
+    padding: 23px !important;
+    background: #21475b !important;
+    border: 1px solid rgba(113, 210, 235, 0.25);
+    border-radius: 13px;
+    color: #eaf4fa !important;
+}
+
+.week-six-page .idea-card h3,
+.week-six-page .content-card h3 {
+    color: #72d9f1 !important;
+    font-size: 19px;
+    margin: 0 0 12px !important;
+}
+
+.week-six-page .idea-card p,
+.week-six-page .content-card p {
+    color: #d6e5ec !important;
+    font-size: 14px;
+    line-height: 1.8 !important;
+    margin: 0 0 12px;
+}
+
+.week-six-page .content-card p:last-child,
+.week-six-page .idea-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* PROCEDIMIENTO */
+
+.week-six-page .process-card {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 18px !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 0 20px !important;
+    padding: 23px !important;
+    box-sizing: border-box;
+    background: #21475b !important;
+    border: 1px solid rgba(113, 210, 235, 0.22);
+    border-radius: 14px;
+    color: #eaf4fa !important;
+}
+
+.week-six-page .process-number {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: #56cde9;
+    color: #0c2a3a !important;
+    font-weight: 800;
+}
+
+.week-six-page .process-card > div {
+    flex: 1;
+    min-width: 0;
+}
+
+.week-six-page .process-card h3 {
+    color: #75ddf3 !important;
+    font-size: 20px;
+    margin: 3px 0 15px !important;
+}
+
+.week-six-page .process-card h4 {
+    color: #a6e8f6 !important;
+    font-size: 16px;
+    margin: 18px 0 8px !important;
+}
+
+.week-six-page .process-card p {
+    color: #d7e7ee !important;
+    font-size: 14px;
+    line-height: 1.85 !important;
+    margin: 0 0 13px !important;
+}
+
+/* IMÁGENES */
+
+.week-six-page .evidence-image {
+    width: 100%;
+    max-width: 850px;
+    margin: 25px auto 8px !important;
+    text-align: center;
+}
+
+.week-six-page .evidence-image img {
+    display: block;
+    width: 100%;
+    max-height: 490px;
+    object-fit: contain;
+    margin: auto;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: #102b3b;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+.week-six-page .image-caption {
+    color: #a9cbd9 !important;
+    font-size: 12px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+/* LISTAS */
+
+.week-six-page .content-card ul {
+    padding-left: 22px;
+    color: #d7e7ee;
+    line-height: 1.9;
+}
+
+.week-six-page .content-card li {
+    margin-bottom: 9px;
+}
+
+.week-six-page .content-card strong {
+    color: #83e0f3;
+}
+
+/* SUBTÍTULOS */
+
+.week-six-page .subsection-title {
+    color: #a5e8f5 !important;
+    font-size: 19px;
+    margin: 28px 0 15px !important;
+}
+
+/* NAVEGACIÓN INFERIOR */
+
+.week-six-page .week-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 30px 0;
+}
+
+.week-six-page .week-nav-link {
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: 9px;
+    background: #1d526b;
+    color: white !important;
+    text-decoration: none !important;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.week-six-page .week-nav-link:hover {
+    background: #287b99;
+}
+
+/* FOOTER */
+
+.week-six-page footer {
+    margin-left: 235px;
+    text-align: center;
+    color: #a9cbd9;
+    padding: 25px;
+}
+
+/* ADAPTACIÓN A TABLETS */
+
+@media (max-width: 850px) {
+
+    .week-six-page .week-sidebar {
+        position: relative;
+        top: auto;
+        width: 100%;
+        height: auto;
+        max-height: 230px;
+        border-right: none;
+        border-bottom: 1px solid rgba(100,210,240,0.2);
+    }
+
+    .week-six-page .sidebar-weeks {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .week-six-page main.week-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding: 22px 15px !important;
+    }
+
+    .week-six-page footer {
+        margin-left: 0;
+    }
+
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 600px) {
+
+    .week-six-page .project-ideas {
+        grid-template-columns: 1fr !important;
+    }
+
+    .week-six-page .week-section {
+        padding: 18px !important;
+    }
+
+    .week-six-page .process-card {
+        padding: 15px !important;
+        gap: 11px !important;
+    }
+
+    .week-six-page .weeks-header {
+        padding: 23px !important;
+    }
+
+}
