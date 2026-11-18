@@ -1,0 +1,994 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Midterm Review | UCuenca</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fondo.css">
+
+    <style>
+        /* =========================
+           MIDTERM REVIEW
+        ========================= */
+
+        .midterm-page {
+            color: #17324d;
+            padding-bottom: 60px;
+        }
+
+        .midterm-container {
+            width: min(1120px, 92%);
+            margin: 0 auto;
+        }
+
+        .midterm-hero {
+            text-align: center;
+            padding: 65px 20px 45px;
+        }
+
+        .midterm-label {
+            display: inline-block;
+            background: #d9efff;
+            color: #12639b;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+        }
+
+        .midterm-hero h1 {
+            font-size: clamp(32px, 5vw, 52px);
+            color: #123c63;
+            margin: 0 0 15px;
+            line-height: 1.15;
+        }
+
+        .midterm-hero h2 {
+            font-size: clamp(19px, 3vw, 27px);
+            color: #2878ad;
+            font-weight: 600;
+            margin: 0 auto 20px;
+        }
+
+        .midterm-hero p {
+            max-width: 760px;
+            margin: 0 auto;
+            line-height: 1.8;
+            color: #526b80;
+        }
+
+        .midterm-team {
+            margin-top: 22px;
+            font-size: 14px;
+            color: #48647c;
+            font-weight: 600;
+        }
+
+        .midterm-section {
+            background: rgba(255, 255, 255, 0.94);
+            border: 1px solid rgba(111, 169, 205, 0.25);
+            border-radius: 20px;
+            padding: 32px;
+            margin: 28px 0;
+            box-shadow: 0 8px 25px rgba(22, 67, 100, 0.07);
+        }
+
+        .midterm-section h2 {
+            color: #155783;
+            font-size: 25px;
+            margin: 0 0 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #d9edf8;
+        }
+
+        .midterm-section h3 {
+            color: #2878ad;
+            font-size: 18px;
+            margin: 25px 0 12px;
+        }
+
+        .midterm-section p {
+            color: #52677a;
+            line-height: 1.85;
+            margin: 12px 0;
+            text-align: justify;
+        }
+
+        .midterm-section ul,
+        .midterm-section ol {
+            color: #52677a;
+            line-height: 1.9;
+            padding-left: 25px;
+        }
+
+        .midterm-section li {
+            margin-bottom: 7px;
+        }
+
+        .midterm-section strong {
+            color: #245b80;
+        }
+
+        .midterm-table-wrap {
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+
+        .midterm-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 480px;
+        }
+
+        .midterm-table th,
+        .midterm-table td {
+            padding: 14px;
+            text-align: center;
+            border: 1px solid #dce9f1;
+        }
+
+        .midterm-table th {
+            background: #e7f4fb;
+            color: #155783;
+        }
+
+        .midterm-table td {
+            color: #52677a;
+        }
+
+        /* GALERÍA DE IMÁGENES */
+
+        .midterm-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+            margin-top: 22px;
+        }
+
+        .midterm-gallery figure {
+            margin: 0;
+            background: #f2f8fc;
+            padding: 10px;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid #e0edf5;
+        }
+
+        .midterm-gallery img {
+            width: 100%;
+            height: 260px;
+            object-fit: contain;
+            display: block;
+            border-radius: 10px;
+            background: #fff;
+            transition: transform 0.3s ease;
+        }
+
+        .midterm-gallery img:hover {
+            transform: scale(1.025);
+        }
+
+        .midterm-gallery figcaption {
+            padding: 12px 5px 5px;
+            color: #45657d;
+            font-size: 14px;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        /* MANUAL DE ENSAMBLE */
+
+        .manual-container {
+            grid-column: 1 / -1;
+            width: 100%;
+            max-width: 1050px;
+            justify-self: center;
+            padding: 20px !important;
+        }
+
+        .midterm-gallery .manual-image {
+            width: 100%;
+            height: auto;
+            max-height: none;
+            object-fit: contain;
+            background: white;
+            border-radius: 10px;
+        }
+
+        .manual-container figcaption {
+            font-size: 15px;
+            padding: 15px 5px 5px;
+        }
+
+        /* VIDEO */
+
+        .midterm-video {
+            margin-top: 24px;
+            background: #eaf4fa;
+            padding: 15px;
+            border-radius: 18px;
+        }
+
+        .midterm-video video {
+            width: 100%;
+            max-height: 620px;
+            display: block;
+            border-radius: 12px;
+            background: #102b40;
+        }
+
+        .midterm-video p {
+            text-align: center;
+            margin-bottom: 0;
+            font-size: 14px;
+        }
+
+        /* RESULTADO FINAL */
+
+        .midterm-final {
+            text-align: center;
+            padding: 38px;
+            background: linear-gradient(135deg, #e9f6fc, #ffffff);
+        }
+
+        .midterm-final h2 {
+            border: none;
+            margin-bottom: 10px;
+        }
+
+        .midterm-final-image {
+            width: 100%;
+            margin-top: 25px;
+            padding: 12px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(24, 75, 110, 0.12);
+        }
+
+        .midterm-final-image img {
+            display: block;
+            width: 100%;
+            max-height: 780px;
+            object-fit: contain;
+            border-radius: 12px;
+        }
+
+        /* ARCHIVOS DEL PROYECTO */
+
+        .midterm-files {
+            background: #eaf5fb;
+            border-radius: 15px;
+            padding: 22px;
+            margin-top: 20px;
+        }
+
+        .midterm-files p {
+            margin: 0;
+        }
+
+        .midterm-download {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: #ffffff;
+            border: 1px solid #d5e7f2;
+            border-radius: 15px;
+            padding: 22px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        .midterm-file-icon {
+            width: 65px;
+            height: 65px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e2f1fb;
+            color: #155783;
+            font-size: 17px;
+            font-weight: 800;
+            border-radius: 13px;
+        }
+
+        .midterm-file-info {
+            flex: 1;
+            min-width: 180px;
+        }
+
+        .midterm-file-info h4 {
+            color: #155783;
+            margin: 0 0 6px;
+            font-size: 17px;
+        }
+
+        .midterm-file-info p {
+            margin: 0 0 5px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .midterm-file-info span {
+            color: #7890a3;
+            font-size: 12px;
+        }
+
+        .midterm-download-btn {
+            display: inline-block;
+            background: #155783;
+            color: white;
+            text-decoration: none;
+            padding: 13px 20px;
+            border-radius: 9px;
+            font-size: 14px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .midterm-download-btn:hover {
+            background: #2878ad;
+            transform: translateY(-2px);
+        }
+
+        /* CONCLUSIONES */
+
+        .midterm-conclusion {
+            background: #edf7fc;
+            border-left: 5px solid #3489ba;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 700px) {
+            .midterm-section {
+                padding: 22px 18px;
+            }
+
+            .midterm-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .midterm-gallery img {
+                height: auto;
+                max-height: 350px;
+            }
+
+            .manual-container {
+                grid-column: auto;
+                padding: 12px !important;
+            }
+
+            .midterm-hero {
+                padding: 45px 15px 30px;
+            }
+
+            .midterm-final {
+                padding: 25px 15px;
+            }
+
+            .midterm-download {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .midterm-download-btn {
+                width: 100%;
+                text-align: center;
+                box-sizing: border-box;
+            }
+        }
+    </style>
+</head>
+
+<body class="midterm-page">
+
+    <!-- MENÚ PRINCIPAL -->
+
+    <header class="navbar">
+        <div class="logo">UCUENCA</div>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="semanas.html">Semanas</a>
+            <a href="nosotros.html">Sobre nosotros</a>
+            <a href="proyecto-final.html">Proyecto final</a>
+            <a href="midterm-review.html" class="active">Midterm Review</a>
+        </nav>
+    </header>
+
+
+    <main class="midterm-container">
+
+        <!-- PORTADA -->
+
+        <section class="midterm-hero">
+
+            <span class="midterm-label">MIDTERM REVIEW</span>
+
+            <h1>Diseño y fabricación de una mesa multifuncional</h1>
+
+            <h2>Proyecto de mobiliario multifuncional</h2>
+
+            <p>
+                Desarrollo de una propuesta de mobiliario compacto,
+                desmontable y personalizable, que integra diseño digital,
+                fabricación láser e impresión UV.
+            </p>
+
+            <div class="midterm-team">
+                Michelle Idrovo · Denisse Inga · Andy Campoverde · David Dalgo
+            </div>
+
+        </section>
+
+
+        <!-- 01. INTRODUCCIÓN -->
+
+        <section class="midterm-section">
+
+            <h2>01. Introducción</h2>
+
+            <p>
+                Como parte del desarrollo del proyecto, se propone el diseño
+                y fabricación de una mesa multifuncional dirigida a jóvenes
+                nómadas digitales y usuarios de departamentos de alquiler
+                mediante plataformas como Airbnb.
+            </p>
+
+            <p>
+                La propuesta busca aprovechar los espacios reducidos mediante
+                un mobiliario compacto, desmontable y fácil de transportar,
+                que permita realizar diferentes actividades, como comer,
+                trabajar y disfrutar de juegos de mesa.
+            </p>
+
+            <p>
+                El proyecto integra herramientas de diseño digital y
+                fabricación, combinando el modelado 3D, el corte láser y
+                la impresión UV para obtener un producto personalizado,
+                funcional y estéticamente atractivo.
+            </p>
+
+        </section>
+
+
+        <!-- 02. CONCEPTO DEL PRODUCTO -->
+
+        <section class="midterm-section">
+
+            <h2>02. Concepto del producto</h2>
+
+            <p>
+                Se plantea el diseño de una mesa circular para cuatro personas,
+                con una estructura inferior formada por elementos curvos que
+                se entrecruzan para proporcionar soporte y estabilidad.
+            </p>
+
+            <h3>Características principales</h3>
+
+            <ul>
+                <li>
+                    <strong>Multifuncionalidad:</strong>
+                    permite utilizar la superficie como mesa de comedor,
+                    espacio de trabajo y tablero de juegos.
+                </li>
+
+                <li>
+                    <strong>Diseño desmontable:</strong>
+                    sus componentes están pensados para ensamblarse mediante
+                    encajes, sin necesidad de tornillos ni adhesivos.
+                </li>
+
+                <li>
+                    <strong>Personalización:</strong>
+                    incorpora un diseño de ajedrez mediante impresión UV
+                    sobre el tablero, convirtiendo la mesa en un espacio
+                    recreativo.
+                </li>
+            </ul>
+
+            <p>
+                Además, se busca que sus componentes ocupen poco espacio
+                y puedan almacenarse de manera compacta, facilitando su
+                transporte y reduciendo las necesidades de almacenamiento.
+            </p>
+
+        </section>
+
+
+        <!-- 03. DIMENSIONES Y ESCALA -->
+
+        <section class="midterm-section">
+
+            <h2>03. Dimensiones y escala</h2>
+
+            <p>
+                El diseño se desarrolla considerando una escala de 0,25
+                respecto a sus dimensiones originales.
+            </p>
+
+            <div class="midterm-table-wrap">
+
+                <table class="midterm-table">
+
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>Medida real</th>
+                            <th>Medida de maqueta</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Diámetro del tablero</td>
+                            <td>100 cm</td>
+                            <td>25 cm</td>
+                        </tr>
+
+                        <tr>
+                            <td>Altura total</td>
+                            <td>75 cm</td>
+                            <td>18,75 cm</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <p>
+                Para la fabricación del prototipo se dispone de una plancha
+                de MDF de 30 × 60 cm, con un espesor de 4 mm.
+            </p>
+
+        </section>
+
+
+        <!-- 04. DISEÑO Y MODELADO -->
+
+        <section class="midterm-section">
+
+            <h2>04. Diseño y modelado digital</h2>
+
+            <p>
+                El proceso de diseño se desarrolló utilizando los programas
+                Fusion 360 y AutoCAD, herramientas que permitieron trabajar
+                en la geometría del producto, definir sus componentes y
+                preparar los archivos necesarios para la fabricación.
+            </p>
+
+            <p>
+                Inicialmente, se realizó un boceto conceptual para establecer
+                la forma circular del tablero y la estructura inferior curva.
+                Posteriormente, se desarrollaron los modelos digitales,
+                considerando las dimensiones a escala, la distribución de
+                las piezas y los sistemas de encaje.
+            </p>
+
+            <h3>Bocetos iniciales</h3>
+
+            <div class="midterm-gallery">
+
+                <figure>
+                    <img src="img/midterm/boceto.png"
+                         alt="Primer boceto conceptual de la mesa">
+                    <figcaption>Boceto conceptual inicial de la mesa.</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="img/midterm/boceto2.png"
+                         alt="Segundo boceto conceptual de la mesa">
+                    <figcaption>Propuesta de diseño y estructura del producto.</figcaption>
+                </figure>
+
+            </div>
+
+            <h3>Modelado en herramientas digitales</h3>
+
+            <div class="midterm-gallery">
+
+                <figure>
+                    <img src="img/midterm/fusion.png"
+                         alt="Modelado de la mesa en Fusion 360">
+                    <figcaption>Desarrollo del modelo tridimensional en Fusion 360.</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="img/midterm/cad.png"
+                         alt="Diseño de piezas de la mesa en AutoCAD">
+                    <figcaption>Diseño y preparación de piezas en AutoCAD.</figcaption>
+                </figure>
+
+            </div>
+
+            <p>
+                El uso de estas herramientas permitió visualizar el producto
+                antes de su fabricación y realizar los ajustes necesarios
+                para preparar los componentes destinados al corte láser.
+            </p>
+
+        </section>
+
+
+        <!-- 05. PERSONALIZACIÓN UV -->
+
+        <section class="midterm-section">
+
+            <h2>05. Personalización mediante impresión UV</h2>
+
+            <p>
+                Uno de los elementos diferenciadores del proyecto es la
+                incorporación de un diseño de ajedrez sobre la superficie
+                del tablero mediante impresión UV.
+            </p>
+
+            <p>
+                Esta propuesta permite ampliar las funciones de la mesa,
+                ya que además de utilizarse para comer o trabajar, ofrece
+                un espacio para actividades recreativas.
+            </p>
+
+            <p>
+                El diseño gráfico se preparó considerando las dimensiones
+                del tablero circular y su distribución superficial.
+                La impresión UV aporta un acabado personalizado al producto
+                y permite integrar el diseño gráfico con la fabricación
+                del mobiliario.
+            </p>
+
+        </section>
+
+
+        <!-- 06. MATERIALES Y FABRICACIÓN -->
+
+        <section class="midterm-section">
+
+            <h2>06. Materiales y proceso de fabricación</h2>
+
+            <p>
+                El material seleccionado para la elaboración del prototipo
+                es MDF de 4 mm de espesor, utilizando una plancha de
+                30 × 60 cm.
+            </p>
+
+            <p>
+                Para el desarrollo del producto se emplearon herramientas
+                de diseño digital y fabricación, siguiendo las siguientes
+                etapas:
+            </p>
+
+            <ol>
+                <li>Elaboración del boceto conceptual.</li>
+                <li>Definición de las dimensiones y la escala.</li>
+                <li>Modelado de las piezas en Fusion 360.</li>
+                <li>Desarrollo y preparación de los archivos en AutoCAD.</li>
+                <li>Revisión del kerf para ajustar los encajes.</li>
+                <li>Preparación y ejecución del corte láser.</li>
+                <li>Preparación del diseño gráfico del tablero.</li>
+                <li>Impresión UV del diseño de ajedrez.</li>
+                <li>Ensamblaje de los componentes y evaluación del producto.</li>
+            </ol>
+
+            <h3>Registro del desarrollo</h3>
+
+            <div class="midterm-gallery">
+
+                <figure>
+                    <img src="img/midterm/desarrollo.png"
+                         alt="Primera evidencia del desarrollo">
+                    <figcaption>Etapa de desarrollo y preparación del proyecto.</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="img/midterm/desarrollo2.png"
+                         alt="Segunda evidencia del desarrollo">
+                    <figcaption>Proceso de preparación de los componentes.</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="img/midterm/desarrollo3.png"
+                         alt="Tercera evidencia del desarrollo">
+                    <figcaption>Avances del proceso de fabricación.</figcaption>
+                </figure>
+
+            </div>
+
+            <h3>Proceso de armado</h3>
+
+            <div class="midterm-gallery">
+
+                <figure>
+                    <img src="img/midterm/armado.png"
+                         alt="Primera evidencia del armado de la mesa">
+                    <figcaption>Proceso de ensamblaje de las piezas.</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="img/midterm/armado2.png"
+                         alt="Segunda evidencia del armado de la mesa">
+                    <figcaption>Integración de los componentes de la estructura.</figcaption>
+                </figure>
+
+            </div>
+
+            <h3>Manual de ensamble</h3>
+
+            <div class="midterm-gallery">
+
+                <figure class="manual-container">
+                    <img src="img/midterm/manual.png"
+                         alt="Manual de ensamble de la mesa"
+                         class="manual-image">
+
+                    <figcaption>
+                        Manual de ensamble elaborado para documentar el armado.
+                    </figcaption>
+                </figure>
+
+            </div>
+
+        </section>
+
+
+        <!-- 07. ORGANIZACIÓN DEL TRABAJO -->
+
+        <section class="midterm-section">
+
+            <h2>07. Organización y distribución del trabajo</h2>
+
+            <p>
+                El desarrollo del proyecto se realizó mediante el trabajo
+                colaborativo de cuatro integrantes, distribuyendo las
+                actividades de acuerdo con las diferentes etapas del proceso.
+            </p>
+
+            <h3>Michelle Idrovo</h3>
+
+            <ul>
+                <li>Elaboración del boceto inicial.</li>
+                <li>Definición de las dimensiones y medidas a escala.</li>
+                <li>Participación en el proceso de impresión UV.</li>
+                <li>Elaboración de la pestaña dentro de la página web.</li>
+            </ul>
+
+            <h3>Denisse Inga</h3>
+
+            <ul>
+                <li>Diseño del tablero.</li>
+                <li>Preparación y participación en la impresión UV.</li>
+                <li>Elaboración del video del proceso.</li>
+                <li>Organización y desarrollo de la documentación del proyecto.</li>
+            </ul>
+
+            <h3>Andy Campoverde</h3>
+
+            <ul>
+                <li>Desarrollo del modelado en Fusion 360 y AutoCAD junto con David.</li>
+                <li>Revisión del kerf y ajustes necesarios para los encajes.</li>
+                <li>Preparación y ejecución del corte láser.</li>
+            </ul>
+
+            <h3>David Dalgo</h3>
+
+            <ul>
+                <li>Desarrollo del modelado en Fusion 360 y AutoCAD junto con Andy.</li>
+                <li>Revisión del kerf y ajustes necesarios para los encajes.</li>
+                <li>Preparación y ejecución del corte láser.</li>
+            </ul>
+
+            <p>
+                La distribución de actividades permitió trabajar de manera
+                organizada, integrando las habilidades de cada integrante
+                en las etapas de diseño, personalización, modelado y fabricación.
+            </p>
+
+        </section>
+
+
+        <!-- 08. CRITERIOS DEL PRODUCTO -->
+
+        <section class="midterm-section">
+
+            <h2>08. Criterios de desarrollo del producto</h2>
+
+            <ul>
+                <li>
+                    <strong>Diseño innovador:</strong>
+                    creación de una propuesta propia con una estructura curva
+                    y una superficie multifuncional.
+                </li>
+
+                <li>
+                    <strong>Impresión UV:</strong>
+                    incorporación de un diseño personalizado de ajedrez
+                    sobre el tablero.
+                </li>
+
+                <li>
+                    <strong>Aprovechamiento del espacio:</strong>
+                    desarrollo de componentes desmontables y apilables
+                    para facilitar su almacenamiento.
+                </li>
+
+                <li>
+                    <strong>Ensamblaje:</strong>
+                    utilización de un sistema de encajes que permita unir
+                    las piezas sin tornillos ni adhesivos.
+                </li>
+
+                <li>
+                    <strong>Estabilidad:</strong>
+                    búsqueda de una estructura firme, con elementos
+                    correctamente conectados.
+                </li>
+
+                <li>
+                    <strong>Documentación digital:</strong>
+                    recopilación del proceso de diseño y fabricación en el
+                    HUB del equipo, incluyendo evidencias y archivos descargables.
+                </li>
+            </ul>
+
+        </section>
+
+
+        <!-- 09. CONCLUSIONES -->
+
+        <section class="midterm-section midterm-conclusion">
+
+            <h2>09. Conclusiones</h2>
+
+            <p>
+                El desarrollo de este proyecto permitió aplicar conocimientos
+                de diseño y fabricación digital en la creación de una propuesta
+                de mobiliario multifuncional.
+            </p>
+
+            <p>
+                La combinación de Fusion 360, AutoCAD, corte láser e impresión
+                UV permitió integrar diferentes procesos tecnológicos en el
+                desarrollo de un mismo producto.
+            </p>
+
+            <p>
+                Asimismo, el trabajo colaborativo facilitó la distribución
+                de responsabilidades y la participación de los cuatro
+                integrantes en las distintas etapas del proyecto.
+            </p>
+
+            <p>
+                La propuesta busca ofrecer una alternativa de mobiliario
+                compacta, personalizable y funcional, adaptada a las necesidades
+                de usuarios que requieren aprovechar mejor los espacios disponibles.
+            </p>
+
+        </section>
+
+
+        <!-- 10. VIDEO DEL PROCESO -->
+
+        <section class="midterm-section">
+
+            <h2>10. Registro audiovisual del proyecto</h2>
+
+            <p>
+                Como parte de la documentación del proyecto, se elaboró
+                un video que recopila diferentes momentos del proceso
+                de diseño, desarrollo y fabricación de la mesa multifuncional.
+            </p>
+
+            <div class="midterm-gallery">
+
+                <figure>
+                    <img src="img/midterm/video.png"
+                         alt="Captura del proceso de elaboración del video">
+                    <figcaption>Preparación y edición del registro audiovisual.</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="img/midterm/video2.png"
+                         alt="Segunda captura de la elaboración del video">
+                    <figcaption>Organización del contenido audiovisual.</figcaption>
+                </figure>
+
+            </div>
+
+            <div class="midterm-video">
+
+                <video controls preload="metadata">
+                    <source src="img/midterm/video.mp4" type="video/mp4">
+                    Tu navegador no puede reproducir este video.
+                </video>
+
+                <p>
+                    Video del proceso de diseño y fabricación de la mesa multifuncional.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- 11. RESULTADO FINAL -->
+
+        <section class="midterm-section midterm-final">
+
+            <span class="midterm-label">RESULTADO DEL PROYECTO</span>
+
+            <h2>11. Resultado final del producto</h2>
+
+            <p>
+                A continuación, se presenta el resultado final de la mesa
+                multifuncional, integrando el diseño de la estructura,
+                el tablero personalizado y los procesos de fabricación
+                desarrollados durante el proyecto.
+            </p>
+
+            <div class="midterm-final-image">
+
+                <img src="img/midterm/final.png"
+                     alt="Resultado final de la mesa multifuncional">
+
+            </div>
+
+            <h3>Documentación y archivos del proyecto</h3>
+
+            <div class="midterm-files">
+
+                <p>
+                    Se adjuntan los archivos digitales, imágenes y evidencias
+                    correspondientes al proceso de diseño, modelado y
+                    fabricación, como respaldo del trabajo realizado
+                    por los integrantes del equipo.
+                </p>
+
+                <!-- ARCHIVO DWG DESCARGABLE -->
+
+                <div class="midterm-download">
+
+                    <div class="midterm-file-icon">DWG</div>
+
+                    <div class="midterm-file-info">
+                        <h4>Modelo digital en AutoCAD</h4>
+                        <p>Archivo editable del diseño de la mesa multifuncional.</p>
+                        <span>Formato: .dwg</span>
+                    </div>
+
+                    <a href="img/midterm/examen2.dwg"
+                       download="examen2.dwg"
+                       class="midterm-download-btn">
+                        ↓ Descargar archivo
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+
+    <footer>
+        <p>
+            UCuenca | Proyecto de diseño y fabricación digital
+        </p>
+
+        <p>
+            Michelle Idrovo · Denisse Inga · Andy Campoverde · David Dalgo
+        </p>
+    </footer>
+
+</body>
+</html>

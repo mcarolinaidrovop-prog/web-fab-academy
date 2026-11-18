@@ -5765,3 +5765,27 @@ body.week-six-page {
         grid-template-columns: 1fr;
     }
 }
+
+/* MANUAL DE ENSAMBLE */
+.manual-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.manual-image {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: 20px auto;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.manual-container figcaption {
+    margin-top: 12px;
+    font-size: 15px;
+}
